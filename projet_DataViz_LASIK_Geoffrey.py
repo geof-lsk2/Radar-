@@ -7,9 +7,11 @@ import seaborn as sns
 import altair as alt
 import plotly.express as px
 
+csv_url = "https://static.data.gouv.fr/resources/jeu-de-donnees-des-vitesses-pratiquees-issues-des-voitures-radars-a-conduite-externalisee/20221221-161623/opendata-vitesse-2021-01-01-2021-12-31.csv"
+
 # Téléchargement des données
 def load_data():
-    data = pd.read_csv('opendata-vitesse-2021-01-01-2021-12-31.csv', delimiter = ';')
+    data = pd.read_csv(csv_url, delimiter = ';')
     return data
 
 df = load_data()
